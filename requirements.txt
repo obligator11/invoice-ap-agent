@@ -1,0 +1,36 @@
+# --- Core app ---
+streamlit==1.38.0
+python-dotenv==1.0.1
+pydantic==2.9.2
+
+# --- DB ---
+SQLAlchemy==2.0.35
+psycopg2-binary==2.9.9
+alembic==1.13.3
+
+# --- LLM clients (both are plain HTTP APIs, so we just use requests) ---
+requests==2.32.3
+
+# --- File ingestion ---
+pdfplumber==0.11.4
+PyMuPDF==1.24.11         # imported as `fitz`
+pdf2image==1.17.0        # requires system package: poppler-utils
+pytesseract==0.3.13      # requires system package: tesseract-ocr
+Pillow==10.4.0
+opencv-python-headless==4.10.0.84
+
+# --- Email ---
+# imaplib / smtplib / email are stdlib, no install needed
+
+# --- Optional office document support ---
+python-docx==1.1.2
+openpyxl==3.1.5
+
+# --- Optional Google Sheets export ---
+gspread==6.1.4
+google-auth==2.35.0
+
+# --- Dev/test ---
+pytest==8.3.3
+pandas==2.2.3
+fpdf2==2.7.9        # only used by scripts/generate_sample_invoices.py
